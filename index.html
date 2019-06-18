@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Sensores de Pressão</title>
+</head>
+
+<body>
+    <form style="width: 50%; margin: auto">
+        <label><h1>Especificações</h1></label>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="aplicacao">Aplicação</label>
+                <select id="aplicacao" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="exatidao">Exatidão</label>
+                <select id="exatidao" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pressao">Pressão</label>
+                <select id="pressao" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="vibracoes">Vibrações</label>
+                <select id="vibracoes" class="form-control">
+                    <option value="nao" selected>Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="temp">Temperatura</label>
+                <select id="temp" class="form-control">
+                    <option value="nao" selected>Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <table class="table">
+        <tr id="1">
+            <th>Nome</th>
+            <th>Aplicação</th>
+            <th>Exatidão</th>
+            <th>Faixa de Medição</th>
+            <th>Vibração</th>
+            <th>Temperatura</th>
+        </tr>
+        <tr>
+            <td>MECÂNICOS - MEDIÇÃO DIRETA</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Manômetro de Tubo em "U"</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Manômetro de Tubo em "U" - Ø diferente</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        <tr>
+            <td>Manômetro de Tubo Inclinado</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>MECÂNICOS - ELÁSTICOS DE MEDIÇÃO</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        <tr>
+            <td>Diafragma Métalico</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Diafragma Não Métalico</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fole</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Bourdon</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Indutiva/Relativa</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Óptico</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- <tr></tr> -->
+        <!-- <tr></tr> -->
+    </table>
+</body>
+</html>

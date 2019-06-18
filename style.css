@@ -1,0 +1,11 @@
+body {
+    background-color: cornflowerblue;
+}
+
+#filter {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding-top: 50px;
+    padding: 10px;
+}
