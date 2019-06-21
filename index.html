@@ -9,24 +9,23 @@
     <title>Sensores de Pressão</title>
 </head>
 
-<body onload="fillTable()">
-    <form style="width: 50%; margin: auto">
+<body>
+    <form onsubmit="return false" style="width: 50%; margin: auto">
         <label><h1>Especificações</h1></label>
         <div class="form-row">
-            <!-- ["4 a 20 mA", "0 até 10 V", "contato normalmente aberto/normalmente fechado"] -->
             <div class="form-group col-md-3">
                 <label for="saida">Sinal de saída</label>
                 <select id="saida" class="form-control">
                     <option value="4 a 20 mA" selected>4 a 20 mA</option>
                     <option value="0 até 10 V">0 até 10 V</option>
-                    <option value="contato normalmente aberto/normalmente fechado">contato normalmente aberto/normalmente fechado</option>
+                    <option value="normalmente aberto/normalmente fechado">normalmente aberto/normalmente fechado</option>
                 </select>
             </div>
             <div class="form-group col-md-3">
                 <label for="exatidao">Precisão</label>
                 <select id="exatidao" class="form-control">
                     <option value="0.50%" selected>0.50%</option>
-                    <option value="0.50%">0.25%</option>
+                    <option value="0.25%">0.25%</option>
                 </select>
             </div>
             <div class="form-group col-md-3">
@@ -55,12 +54,13 @@
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="filtrarSensores()">Buscar</button>
+        <button class="btn btn-primary" onclick="filtrarSensores()">Buscar</button>
     </form>
     <br>
     <br>
     <br>
     <table id="table" class="table table-bordered">
     </table>
+    <script>initTable()</script>
 </body>
 </html>
