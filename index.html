@@ -9,147 +9,58 @@
     <title>Sensores de Pressão</title>
 </head>
 
-<body>
+<body onload="fillTable()">
     <form style="width: 50%; margin: auto">
         <label><h1>Especificações</h1></label>
         <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="aplicacao">Aplicação</label>
-                <select id="aplicacao" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+            <!-- ["4 a 20 mA", "0 até 10 V", "contato normalmente aberto/normalmente fechado"] -->
+            <div class="form-group col-md-3">
+                <label for="saida">Sinal de saída</label>
+                <select id="saida" class="form-control">
+                    <option value="4 a 20 mA" selected>4 a 20 mA</option>
+                    <option value="0 até 10 V">0 até 10 V</option>
+                    <option value="contato normalmente aberto/normalmente fechado">contato normalmente aberto/normalmente fechado</option>
                 </select>
             </div>
-            <div class="form-group col-md-4">
-                <label for="exatidao">Exatidão</label>
+            <div class="form-group col-md-3">
+                <label for="exatidao">Precisão</label>
                 <select id="exatidao" class="form-control">
-                    <option value="ge1" selected>≥ 1,0 %</option>
-                    <option value="bt05025">0,5% e 0,25%</option>
-                    <option value="bt01005">0,1% e 0,05%</option>
+                    <option value="0.50%" selected>0.50%</option>
+                    <option value="0.50%">0.25%</option>
                 </select>
             </div>
-            <div class="form-group col-md-4">
-                <label for="pressao">Pressão</label>
-                <select id="pressao" class="form-control">
-                    <option value="1" selected>< 1 bar</option>
-                    <option value="100">< 100 bar</option>
-                    <option value="1000">< 1.000 bar</option>
-                    <option value="1000">> 1.000 bar</option>
+            <div class="form-group col-md-3">
+                <label for="med">Faixa de Medição</label>
+                <select id="med" class="form-control">
+                    <option value='0 até 5 bar' selected>0 até 5 bar</option>
+                    <option value='0 até 10 bar'>0 até 10 bar</option>
+                    <option value='0 até 20 bar'>0 até 20 bar</option>
+                    <option value='0 até 50 bar'>0 até 50 bar</option>
+                    <option value='0 até 100 bar'>0 até 100 bar</option>
+                    <option value='0 até 250 bar'>0 até 250 bar</option>
+                    <option value='0 até 400 bar'>0 até 400 bar</option>
+                    <option value='-1 até 2 bar'>-1 até 2 bar</option>
+                    <option value='0 até 2 bar'>0 até 2 bar</option>
+                    <option value='0 até 600 bar'>0 até 600 bar</option>
+                    <option value='-1 até 0 bar'>-1 até 0 bar</option>
+                    <option value='-1 até 10 bar'>-1 até 10 bar</option>
                 </select>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3">
                 <label for="temp">Temperatura</label>
                 <select id="temp" class="form-control">
-                    <option value="1" selected>< 1 bar</option>
-                    <option value="100">< 100 bar</option>
-                    <option value="1000">< 1.000 bar</option>
-                    <option value="1000">> 1.000 bar</option>
+                    <option value='-40...125 °C' selected>-40...125 °C</option>
+                    <option value='-25...125 °C'>-25...125 °C</option>
+                    </option>
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" ondblclick="filtrarSensores()">Buscar</button>
+        <button type="submit" class="btn btn-primary" onclick="filtrarSensores()">Buscar</button>
     </form>
     <br>
     <br>
     <br>
-    <table class="table">
-        <tr id="1">
-            <th>Nome</th>
-            <th>Aplicação</th>
-            <th>Exatidão</th>
-            <th>Faixa de Medição</th>
-            <th>Vibração</th>
-            <th>Temperatura</th>
-        </tr>
-        <tr>
-            <td>MECÂNICOS - MEDIÇÃO DIRETA</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Manômetro de Tubo em "U"</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tr>
-        <tr>
-            <td>Manômetro de Tubo em "U" - Ø diferente</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        <tr>
-            <td>Manômetro de Tubo Inclinado</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>MECÂNICOS - ELÁSTICOS DE MEDIÇÃO</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        <tr>
-            <td>Diafragma Métalico</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Diafragma Não Métalico</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Fole</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Bourdon</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Indutiva/Relativa</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Óptico</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+    <table id="table" class="table">
     </table>
 </body>
 </html>
